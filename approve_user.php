@@ -33,7 +33,7 @@ if (isset($_GET['user']) && isset($_GET['action'])) {
             $mail->Host       = 'mail.lcfe.ng';
             $mail->SMTPAuth   = true;
             $mail->Username   = 'portal@lcfe.ng';
-            $mail->Password   = 'Adm!n@12345{#';
+            $mail->Password   = '';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port       = 587;
 
