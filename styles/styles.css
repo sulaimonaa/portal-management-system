@@ -1,0 +1,173 @@
+@media (min-width: 768px) {
+    .brand img {
+        width: 100%;
+    }
+    .agr {
+        min-height: 560px;
+    }
+    .dash-container {
+        min-height: 460px;
+    }
+    .profile-display {
+        min-height: 800px;
+        background: #f8f9fa;
+    }
+    .pdc {
+        height: 150px;
+    }
+    .lf {
+        width: 80%;
+    }
+}
+body {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    width: 100%;
+    height: 100%;
+}
+.brand img {
+    width: 50%;
+}
+.lf {
+    width: 90%;
+}
+.bg-comp {
+    background: #037537 !important;
+}
+.text-comp {
+    color: #037537 !important;
+}
+.bg-comp-2 {
+    background: #d7fee9;
+}
+/* custom font-size */
+.smfs-5 {
+    font-size: 0.8rem;
+}
+.smfs-6 {
+    font-size: 0.6rem;
+}
+.footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    clear: both;
+    bottom: 0;
+}
+.agr {
+    min-height: 620px;
+}
+.dash-container {
+    min-height: 460px;
+}
+.dash-table {
+    min-height: 400px;
+}
+/* dealing members form */
+.form-section {
+    display: none;
+}
+.subBtn, .regBtn, .forgetBtn {
+    transition: all 0.5s;
+}
+.subBtn:hover {
+    background: #037537;
+    color: #fff;
+    margin-left: 10px;
+}
+.regBtn:hover, .forgetBtn:hover {
+    background: #d7fee9;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+#password-strength {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.weak {
+    color: red;
+}
+.medium {
+    color: orange;
+}
+.strong {
+    color: green;
+}
+/* Home Page */
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    background: #f8f9fa !important;
+    color: #037537 !important;
+    border-radius: 4px;
+}
+.navbar-nav .nav-link {
+    transition: all 0.5s;
+}
+.navbar-nav .nav-link:hover {
+    background: #f8f9fa !important;
+    color: #037537 !important;
+    border-radius: 2px;
+}
+.login-tab {
+    border-radius: 100px !important;
+    transition: all 0.5s;
+}
+.login-tab:hover {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.h-hero {
+    background: #0a0a0ac0;
+    background-image: url('../assets/images/hero1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-attachment: scroll;
+    background-position: bottom center;
+    height: 420px;
+}
+.c-hero {
+    background: #0a0a0ac0;
+    background-image: url('../assets/images/exchange-money.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-attachment: scroll;
+    background-position: center center;
+    height: 420px;
+}
+.p-hero {
+    background: #0a0a0ac0;
+    background-image: url('../assets/images/payment.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-attachment: scroll;
+    background-position: top center;
+    height: 420px;
+}
+.s-hero {
+    background: #0a0a0ac0;
+    background-image: url('../assets/images/statistics.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-attachment: scroll;
+    background-position: center center;
+    height: 420px;
+}
+.navbar-toggler {
+    position: absolute;
+    right: 0;
+    top: -50px;
+}
+.nav-tabs .nav-link {
+    color: #037537 !important;
+}
+.nav-tabs .nav-link.active {
+    background: #037537 !important;
+    color: #fff !important;
+}
