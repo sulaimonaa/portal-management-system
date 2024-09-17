@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $mail->Host       = 'mail.lcfe.ng';
             $mail->SMTPAuth   = true;
             $mail->Username   = 'portal@lcfe.ng';
-            $mail->Password   = 'Adm!n@12345{#';
+            $mail->Password   = '';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port       = 587;
 
