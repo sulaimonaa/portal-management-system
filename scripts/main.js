@@ -80,6 +80,8 @@ function getPasswordStrength(password) {
 let table1 = new DataTable('#example');
 let table2 = new DataTable('#example1');
 let table3 = new DataTable('#example2');
+let table4 = new DataTable('#example3');
+let table5 = new DataTable('#example4');
 
 
 

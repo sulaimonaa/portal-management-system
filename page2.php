@@ -20,13 +20,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     function uploadFile($input_name) {
         $target_dir = "uploads/";
-        $target_file = $target_dir . basename($_FILES[$input_name]["name"]);
-        if (move_uploaded_file($_FILES[$input_name]["tmp_name"], $target_file)) {
-            return $target_file;
-        } else {
-            return null;
+        $file = $_FILES[$input_name];
+        $target_file = $target_dir . basename($file["name"]);
+        
+        if ($file['error'] === UPLOAD_ERR_OK) {
+            $allowed_types = ['image/jpeg', 'image/png', 'application/pdf'];
+            if (in_array($file['type'], $allowed_types) && $file['size'] <= 1048576) {
+                if (move_uploaded_file($file["tmp_name"], $target_file)) {
+                    return $target_file;
+                }
+            }
         }
+        return null;
     }
+
     $_SESSION['qq_report'] = uploadFile('qq_report');
     $_SESSION['bill_of_lading'] = uploadFile('bill_of_lading');
     $_SESSION['capital_importation_license'] = uploadFile('capital_importation_license');

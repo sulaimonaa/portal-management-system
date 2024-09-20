@@ -117,7 +117,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <option value="Specialized Commodities Dealer">Specialized Commodities Dealer</option>
                     <option value="Commodities Broker Dealer">Commodities Broker Dealer</option>
                     <option value="Commodities Trader">Commodities Trader</option>
-                    <option value="user">User</option>
                 </select><br>
                 <button type="submit" class="border-0 py-2 px-4 rounded subBtn">Register</button>
                 <a href="login.php" class="smfs-5 text-comp"><span class="smfs-5 text-comp">Go back to Login<i class="bi bi-door-open-fill"></i></span></a>

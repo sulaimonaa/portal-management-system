@@ -45,7 +45,7 @@ if (!isset($_SESSION['user_id']) ||
 <div class="container py-4">
     <div class="d-md-flex gap-2 col-md-12 py-4">
         <div class="news d-flex flex-column col-md-7 mb-3">
-            <h5 class="smfs-6 text-uppercase text-comp mb-2">Important updates for <?= $aggregators['level'];?></h5>
+            <h5 class="smfs-6 text-uppercase text-comp mb-2">Important updates for <?= $aggregators['level'];?>s</h5>
             <div class="w-100 rounded" style="height: 248px">
                 <img src="assets/images/updates.jpg" alt="Image from article" class="w-100 rounded h-100" />
             </div>

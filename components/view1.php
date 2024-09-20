@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div
             class="col-md-12 d-block d-md-flex gap-3 align-items-start dash-container">
             <div
-                class="col-12 col-md-6 bg-light shadow-sm p-4 px-2 px-md-4 mb-2 rounded dash-table">
+                class="col-12 col-md-6 bg-light shadow-sm p-4 px-md-2 px-lg-4 mb-2 rounded dash-table">
                 <h2 class="fs-4 text-secondary">Client List</h2>
                 <?php
                     include 'includes/db.php';
@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                 ?>
                 <div class="table-responsive mt-4">
-                    <table class="table smfs-6">
+                    <table id="example3" class="table smfs-6 datatable">
                         <thead style="vertical-align: middle;">
                             <th>Name</th>
                             <th class="text-center">Email</th>
@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
 
         <div
-            class="col-12 col-md-6 bg-light shadow-sm p-4 px-2 px-md-4 mb-2 rounded dash-table">
+            class="col-12 col-md-6 bg-light shadow-sm p-4 px-md-2 px-lg-4 mb-2 rounded dash-table">
             <h2 class="fs-4 text-secondary">List of Registered Users</h2>
             <?php
                     include 'includes/db.php';
@@ -118,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                 ?>
             <div class="table-responsive mt-4">
-                <table class="table smfs-6 position-relative">
+                <table id="example4" class="table smfs-6 position-relative datatable">
                     <thead style="vertical-align: middle;">
                         <th>Name</th>
                         <th class="text-center">Email</th>

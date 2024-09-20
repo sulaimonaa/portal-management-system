@@ -16,12 +16,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     function uploadFile($input_name) {
         $target_dir = "uploads/";
-        $target_file = $target_dir . basename($_FILES[$input_name]["name"]);
-        if (move_uploaded_file($_FILES[$input_name]["tmp_name"], $target_file)) {
-            return $target_file;
-        } else {
-            return null;
+        $file = $_FILES[$input_name];
+        $target_file = $target_dir . basename($file["name"]);
+        
+        if ($file['error'] === UPLOAD_ERR_OK) {
+            $allowed_types = ['image/jpeg', 'image/png', 'application/pdf'];
+            if (in_array($file['type'], $allowed_types) && $file['size'] <= 1048576) {
+                if (move_uploaded_file($file["tmp_name"], $target_file)) {
+                    return $target_file;
+                }
+            }
         }
+        return null;
     }
 
     $_SESSION['certificate_of_origin'] = uploadFile('certificate_of_origin');
@@ -47,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         organization_name, years_in_operation, rc_number, certificate_of_incorporation, 
                         memorandum_articles_of_association, status_report, nerc_certificate, 
                         contact_person_nin_bvn_1, contact_person_nin_bvn_2, financial_status, 
-                        tax_certificate, tax_id, authorized_share_capital, size, location, type, 
+                        tax_certificate, tax_id, authorized_share_capital, size, location, type, c_total, 
                         registered_office_address, email, phone_number, commodity_to_aggregate, 
                         quantity_of_commodity, user_id, export_or_import, product_type, hs_code, 
                         qq_report, bill_of_lading, eta, pod, capital_importation_license, certificate_of_origin, sellers_commercial_invoice, 
@@ -56,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         :organization_name, :years_in_operation, :rc_number, :certificate_of_incorporation, 
                         :memorandum_articles_of_association, :status_report, :nerc_certificate, 
                         :contact_person_nin_bvn_1, :contact_person_nin_bvn_2, :financial_status, 
-                        :tax_certificate, :tax_id, :authorized_share_capital, :size, :location, :type, 
+                        :tax_certificate, :tax_id, :authorized_share_capital, :size, :location, :type, :c_total, 
                         :registered_office_address, :email, :phone_number, :commodity_to_aggregate, 
                         :quantity_of_commodity, :user_id, :export_or_import, :product_type, :hs_code, 
                         :qq_report, :bill_of_lading, :eta, :pod, :capital_importation_license, :certificate_of_origin, :sellers_commercial_invoice, 
@@ -81,6 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->bindValue(':size', $_SESSION['size']);
             $stmt->bindValue(':location', $_SESSION['location']);
             $stmt->bindValue(':type', $_SESSION['type']);
+            $stmt->bindValue(':c_total', $_SESSION['c_total']);
             $stmt->bindValue(':registered_office_address', $_SESSION['registered_office_address']);
             $stmt->bindValue(':email', $_SESSION['email']);
             $stmt->bindValue(':phone_number', $_SESSION['phone_number']);

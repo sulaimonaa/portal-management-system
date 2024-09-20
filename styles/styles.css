@@ -171,3 +171,10 @@ body {
     background: #037537 !important;
     color: #fff !important;
 }
+/* datatables */
+div.dataTables_wrapper div.dataTables_length label,
+div.dataTables_wrapper div.dataTables_filter label,
+div.dataTables_wrapper div.dataTables_info,
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    font-size: 0.6rem;
+}
